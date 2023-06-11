@@ -58,7 +58,7 @@ To get started with creating and using aliases, follow these steps:
 
 For example: the alias below will allow you to navigate to your desktop from your current location.
  
-	**alias d='cd ~/Desktop'**
+**alias d='cd ~/Desktop'**
 	
 3. Save and close the .bash_aliases file.
 
