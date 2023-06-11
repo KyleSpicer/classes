@@ -66,7 +66,7 @@ For example: the alias below will allow you to navigate to your desktop from you
 
 5. Test your aliases by running the alias names you defined. For example, if you created the desktop shortcut, you can run 'd' in your terminal and you'll navigate to your desktop from wherever you are within your file system.
 
-### Adding a SOURCE alias
+### [Adding a SOURCE alias](#adding-a-source-alias)
 
 Updating your .bash_aliases file is simple, but often times I forget I need to source the file to introduce the changes to my current terminal session. An easy way to remember is to create a new alias for it!
 
@@ -82,7 +82,7 @@ Updating your .bash_aliases file is simple, but often times I forget I need to s
 
 5. Test the source functionality now by opening your bash aliases file, making a change, saving the file, closing it, then simply enter 's' in the terminal. This should now source your changes for you. No need to remember that long source command!
 
-### Adding an alias to open you .bash_alias from anywhere
+### [Adding an alias to open your .bash_aliases from anywhere](#adding-an-alias-to-open-your-bash_aliases-from-anywhere)
 
 Opening your '.bash_aliases' to make a quick change shouldn't require any brain power. Let's make an alias that will allow us to enter one command to open our '.bash_aliases' file from anywhere within our file system.
 
