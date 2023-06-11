@@ -48,7 +48,7 @@ To get started with creating a .bash_aliases file, follow these steps:
 By following these steps, you'll be able to set up and work with Bash aliases effectively.
 
 
-### Adding Aliases
+## Adding Aliases
 
 To get started with creating and using aliases, follow these steps:
 
