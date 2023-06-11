@@ -7,8 +7,7 @@ Welcome to the "Bash Aliases" class! In this class, you will learn about the pow
 -[Introduction](#introduction)  
 -[Getting Started](#getting-started)  
 -[Adding Aliases](#adding-aliases)  
--[Usage](#usage)  
--[Examples](#examples)  
+
 
 
 ## Introduction
@@ -46,6 +45,7 @@ To get started with creating a .bash_aliases file, follow these steps:
 5. Now you're ready to add your own aliases and customize your Bash experience!
 
 By following these steps, you'll be able to set up and work with Bash aliases effectively.
+
 
 
 ## Adding Aliases
