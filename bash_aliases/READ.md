@@ -5,6 +5,8 @@ Welcome to the "Bash Aliases" class! In this class, you will learn about the pow
 ## Table of Contents
 
 -[Introduction](#introduction)  
+-[Getting Started](#getting-started)  
+-[Adding Aliases](#adding-aliases)
 -[Usage](#usage)  
 -[Examples](#examples)  
 
@@ -28,4 +30,26 @@ The use of `.bash_aliases` offers several advantages:
 - **Easy maintenance:** By separating aliases into the `.bash_aliases` file, you can easily manage and update your aliases without modifying the main `.bashrc` file.
 
 In this class, we will explore the concept of Bash aliases and how they can enhance your command-line experience.
+
+## Getting Started
+
+To get started with creating a .bash_aliases file, follow these steps:
+
+1. Open a terminal and navigate to your root directory.
+
+2. The `.bashrc` file is a hidden file. To view hidden files, enter the command `ls -la` in your terminal.
+
+3. Create a `.bash_aliases` file. If you haven't created this file before, it may not be present in your directory. To create it, simply enter `touch .bash_aliases` in your terminal.
+
+4. Open your `.bash_aliases` file. If you just created it, it will be blank.
+
+5. Now you're ready to add your own aliases and customize your Bash experience!
+
+By following these steps, you'll be able to set up and work with Bash aliases effectively.
+
+
+### Adding Aliases
+
+To get started with creating and using aliases, follow these steps:
+
 
