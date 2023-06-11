@@ -56,8 +56,9 @@ To get started with creating and using aliases, follow these steps:
 
 2. Define your aliases by adding lines in the following format: `alias alias_name='command'`. Replace `alias_name` with the desired name for your alias and `command` with the actual command you want to associate with the alias. 
 
-For example: the alias below will allow you to navigate to your desktop from your current location. 
-	alias d='cd ~/Desktop'
+For example: the alias below will allow you to navigate to your desktop from your current location.
+ 
+	**alias d='cd ~/Desktop'**
 	
 3. Save and close the .bash_aliases file.
 
