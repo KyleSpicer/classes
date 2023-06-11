@@ -4,9 +4,9 @@ Welcome to the "Bash Aliases" class! In this class, you will learn about the pow
 
 ## Table of Contents
 
--[Introduction](#introduction)
--[Usage](#usage)
--[Examples](#examples)
+-[Introduction](#introduction)  
+-[Usage](#usage)  
+-[Examples](#examples)  
 
 
 ## Introduction
