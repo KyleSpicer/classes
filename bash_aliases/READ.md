@@ -6,7 +6,7 @@ Welcome to the "Bash Aliases" class! In this class, you will learn about the pow
 
 -[Introduction](#introduction)  
 -[Getting Started](#getting-started)  
--[Adding Aliases](#adding-aliases)
+-[Adding Aliases](#adding-aliases)  
 -[Usage](#usage)  
 -[Examples](#examples)  
 
