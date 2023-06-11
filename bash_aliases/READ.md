@@ -6,7 +6,7 @@ Welcome to the "Bash Aliases" class! In this class, you will learn about the pow
 
 -[Introduction](#introduction)  
 -[Getting Started](#getting-started)  
--[Adding Aliases](#adding-aliases)  
+-[Adding Aliases](#adding-aliases)
   - [Adding a SOURCE alias](#adding-a-source-alias)  
   - [Adding an alias to open your .bash_aliases from anywhere](#adding-an-alias-to-open-your-bash_aliases-from-anywhere)  
 
