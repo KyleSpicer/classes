@@ -83,3 +83,21 @@ Updating your .bash_aliases file is simple, but often times I forget I need to s
 5. Test the source functionality now by opening your bash aliases file, making a change, saving the file, closing it, then simply enter 's' in the terminal. This should now source your changes for you. No need to remember that long source command!
 
 ### Adding an alias to open you .bash_alias from anywhere
+
+Opening your '.bash_aliases' to make a quick change shouldn't require any brain power. Let's make an alias that will allow us to enter one command to open our '.bash_aliases' file from anywhere within our file system.
+
+1. Open your `.bash_aliases` file using a text editor. If you haven't created this file yet, refer to the [Getting Started](#getting-started) section for instructions on how to create it.
+
+2. Define your new alias for opening your '.bash_aliases' file. Below is the alias I used.
+
+**alias gc='gedit ~/.bash_aliases'**
+
+You can also combine aliases for more power! For example, combining the source alias with the alias to open your '.bash_aliases' file will automatically source the file for you when it closes.
+
+**alias gc='gedit ~/.bash_aliases; source ~/.bash_aliases;'**
+
+3. Save and close the '.bash_aliases' file.
+
+4. Source the '.bash_aliases; file to implement the changes.
+
+5. Now you should be able to simply enter 'gc' into your teminal and your '.bash_alises' file will open regardless of your location in your file system.
