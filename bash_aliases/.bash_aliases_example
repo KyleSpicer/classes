@@ -1,0 +1,99 @@
+export EDITOR='gedit'
+export VISUAL='gedit'
+alias l='ls --color=auto -larth'
+alias s='source ~/.bash_aliases'
+alias gc='gedit ~/.bash_aliases; source ~/.bash_aliases;'
+alias get='wget -r x.x.x.x:8888'
+alias log='git log --pretty=oneline'
+alias k='kill %1'
+alias python3='python3.8'
+alias ascii='man 7 ascii'
+
+### navigation ###
+#
+alias d='cd ~/Desktop'
+alias lab='cd ~/Desktop/gitlab'
+alias hub='cd ~/Desktop/github'
+alias dev='cd ~/Desktop/dev'
+alias devp='cd ~/Desktop/dev/projects/reverse-again/reverse2'
+alias p='cd ~/Desktop/gitlab/timed'
+
+alias g='~/./ghidra_10.2.3_PUBLIC/ghidraRun'
+alias duck='cd ~/Desktop/gitlab/ducky-client-server'
+alias lib="cd ~/Desktop/github/spice_libraries/c"
+
+
+### easy commands ###
+#
+alias protocols='cat /etc/protocols'
+alias sigsafe='man 7 signal-safety'
+alias errno='man 3 errno'
+alias protocols='cat /etc/protocols'
+
+### get skeletons
+alias get-c-skeleton='cp ~/Desktop/github/spice_libraries/c/skeleton.c "$(read -e -p "Enter new C file name: "; echo "$REPLY".c)"'
+
+alias get-py-skeleton='cp ~/Desktop/github/spice_libraries/python/skeleton.py "$(read -e -p "Enter new Python file name: "; echo "$REPLY".py)"'
+
+
+### get libraries
+#
+alias get-avl="cp ~/Desktop/github/spice_libraries/c/thread_safe_structures/avl_tree/* ."
+alias get-bst="cp ~/Desktop/github/spice_libraries/c/thread_safe_structures/bst/* ."
+alias get-hashtable="cp ~/Desktop/github/spice_libraries/c/thread_safe_structures/hashtable/* ."
+alias get-llist="cp ~/Desktop/github/spice_libraries/c/thread_safe_structures/llist/* ."
+alias get-pqueue="cp ~/Desktop/github/spice_libraries/c/thread_safe_structures/pqueue/* ."
+alias get-tpool="cp ~/Desktop/github/spice_libraries/c/thread_safe_structures/tpool/* ."
+alias get-file-io="cp ~/Desktop/github/spice_libraries/c/file_io/* ."
+alias get-signals="cp ~/Desktop/github/spice_libraries/c/signals/* ."
+alias get-colors="cp ~/Desktop/github/spice_libraries/c/colors/* ."
+alias get-makefile="cp ~/Desktop/github/spice_libraries/repo_maker/c_repo/Makefile ."
+alias get-helpers="cp ~/Desktop/github/spice_libraries/c/helpers/* ."
+alias get-errorcodes="cp ~/Desktop/github/spice_libraries/c/error-codes.h ."
+
+### virtual environments ###
+#
+#alias v='source pypeople_venv/bin/activate'
+#alias dv='deactivate'
+#alias vimnew='vim ~/.vimrc'
+#alias venv='python# -m venv venv_name'
+
+
+### automation tasks ###
+#
+alias myscript='python3.10 ~/Desktop/github/spice_libraries/python/make.py'
+alias repomaker='python3 ~/Desktop/github/spice_libraries/repo_maker/repo_maker.py'
+alias _ssh='ssh -X kyle.d.spicer61@10.50.34.78'
+alias newc='cp ~/Desktop/github/spice_libraries/repo_maker/c_repo/driver.c ./newfile.c && cp ~/Desktop/github/spice_libraries/repo_maker/c_repo/Makefile ./Makefile'
+alias newp='cp ~/Desktop/github/spice_libraries/repo_maker/py_repo/driver.py ./newfile.py'
+alias ssh_fail_log='grep "Failed password" /var/log/auth.log'
+alias run='make clean && make run'
+alias ass='cd /home/kyle/Desktop/github/assembly/'
+alias assmakefile='cp /home/kyle/.vim/Templates/assembly/Makefile .'
+
+
+### jqr automations
+#
+alias j='cd ~/Desktop/jqr-spicer/exercises/C'
+alias fake="../../../scripts/build.sh && ./build/3.1.12_exe"
+alias trash-fake="rm -rf build/"
+alias fake-gdb="../../../scripts/build.sh && gdb -ex r -ex bt -q --args ./build/3.1.12_exe"
+alias leak='trash-fake && ../../../scripts/build.sh && valgrind --leak-check=full --show-leak-kinds=all -s ./build/3.1.12_exe'
+alias py-fake='python3 tests/__init__.py'
+
+### functions
+scp() {
+    scp -P 49385 -r "$@" kyle@kdspicer.com:~/Desktop/scp/.
+}
+
+tcpshark() {
+    sudo tcpdump -nXi lo "tcp port $1 and not tcp[13] == 0x10"
+}
+
+findit() {
+	find /usr/include/ -type f -iname "*$1*"
+}
+
+### extras ###
+#alias vpn='sudo openvpn --config ~/Downloads/openvpn-2.5.7/file'
+#alias gc='gedit ~/.bash_aliases; source ~/.bash_aliases; scp ~/.bashaliases kyle.d.spicer61@10.50.34.78:~/.' 
