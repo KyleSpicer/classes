@@ -1,4 +1,4 @@
-# Kyle Spicer's Github Classes
+# Kyle Spicer's GitHub Classes
 
 ## About 
 I embarked on my programming journey in April 2022 when I started the 170D Warrant Officer Basic Course. Prior to that, I had no formal experience with computers or programming theory.
