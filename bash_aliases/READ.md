@@ -8,9 +8,11 @@ Welcome to the "Bash Aliases" class! In this class, you will learn about the pow
 -[Getting Started](#getting-started)  
 -[Adding Aliases](#adding-aliases)
   - [Adding a SOURCE alias](#adding-a-source-alias)  
-  - [Adding an alias to open your .bash_aliases from anywhere](#adding-an-alias-to-open-your-bash_aliases-from-anywhere)  
+  - [Open/edit your .bash_aliases from anywhere](#openedit-your-bash_aliases-from-anywhere)
 
-
+-[Simple aliases](#simple-aliases)  
+-[Copying files using aliases](#copying-files-using-aliases)  
+-[Custom functions with aliases](#custom-functions-with-aliases)
 
 ## Introduction
 
@@ -60,7 +62,7 @@ To get started with creating and using aliases, follow these steps:
 
 For example: the alias below will allow you to navigate to your desktop from your current location.
  
-**alias d='cd ~/Desktop'**
+`**alias d='cd ~/Desktop'**`
 	
 3. Save and close the .bash_aliases file.
 
@@ -76,7 +78,7 @@ Updating your .bash_aliases file is simple, but often times I forget I need to s
 
 2. Define your new alias for sourcing your '.bash_aliases' file. Below is the alias I used.
 
-**alias s='source ~/.bash_aliases'**
+`**alias s='source ~/.bash_aliases'**`
 
 3. Save and close the .bash_aliases file.
 
@@ -84,7 +86,7 @@ Updating your .bash_aliases file is simple, but often times I forget I need to s
 
 5. Test the source functionality now by opening your bash aliases file, making a change, saving the file, closing it, then simply enter 's' in the terminal. This should now source your changes for you. No need to remember that long source command!
 
-### [Adding an alias to open your .bash_aliases from anywhere](#adding-an-alias-to-open-your-bash_aliases-from-anywhere)
+### [Open/edit your .bash_aliases from anywhere](#openedit-your-bash_aliases-from-anywhere)
 
 Opening your '.bash_aliases' to make a quick change shouldn't require any brain power. Let's make an alias that will allow us to enter one command to open our '.bash_aliases' file from anywhere within our file system.
 
@@ -92,14 +94,91 @@ Opening your '.bash_aliases' to make a quick change shouldn't require any brain 
 
 2. Define your new alias for opening your '.bash_aliases' file. Below is the alias I used.
 
-**alias gc='gedit ~/.bash_aliases'**
+`**alias gc='gedit ~/.bash_aliases'**`
 
 You can also combine aliases for more power! For example, combining the source alias with the alias to open your '.bash_aliases' file will automatically source the file for you when it closes.
 
-**alias gc='gedit ~/.bash_aliases; source ~/.bash_aliases;'**
+`**alias gc='gedit ~/.bash_aliases; source ~/.bash_aliases;'**`
 
 3. Save and close the '.bash_aliases' file.
 
 4. Source the '.bash_aliases; file to implement the changes.
 
 5. Now you should be able to simply enter 'gc' into your teminal and your '.bash_alises' file will open regardless of your location in your file system.
+
+
+
+## [Simple aliases](#simple-aliases)
+ - Simple aliases provide an effective means to enhance efficiency by reducing keystrokes. Here are a few illustrative examples along with their descriptions:
+
+1. ```alias hub='cd ~/Desktop/github'```: This alias simplifies navigation. Instead of manually typing the path every time to access a commonly used folder, I have created an alias and added it to my aliases file. Now, regardless of my current location within the file system, executing 'hub' in a terminal promptly takes me to my GitHub folder.
+
+2. ```alias errno='man 3 errno'```: Aliases can be employed to streamline repetitive information retrieval. In scenarios where frequent reference to specific documentation is necessary during project work, I often create aliases to expedite access to the relevant documentation.
+
+3.  ```alias protocols='cat /etc/protocols'```: Furthermore, I create aliases to quickly view the contents of files within my file system for documentation purposes. The provided examples serve to inspire potential ideas for creating aliases that suit individual preferences and requirements.
+
+##  [Copying files using aliases](#copying-files-using-aliases)
+- Copying frequently used files such as libraries or skeleton files can also be a massive time saver. Below are a few examples.
+### Copying libraries
+- In C programming, a library is a collection of precompiled functions and code that can be used by other programs, offering ready-made functionality and promoting code reusability. It simplifies development by providing a range of pre-implemented functions for common tasks.
+
+- I maintain a set of frequently used and regularly updated libraries in a consistent location within my file system. To simplify the process of copying the `".c"` and `".h"` files for each library to my current working directory, I created aliases. One such alias, `"get-file-io"` is designed to copy all the contents from a specified path to my current location, regardless of where I am within the file system.
+
+Alias:  
+`alias get-file-io="cp ~/Desktop/github/spice_libraries/c/file_io/* ."`
+
+
+Implementation:
+```
+[tester] ❱❱❱  $ get-file-io 
+[tester] ❱❱❱  $ ls
+file_io.c  file_io.h
+```
+
+
+### Copying skeleton files
+- A skeleton file serves as a basic template containing all the necessary required includes and formatting to initiate a program.
+
+- This alias enables the copying of a C skeleton file from a specified path. Once executed, it prompts the user to enter a new name for the file. In the alias, the path and file name are denoted as ```skeleton.c```. When the alias is run, the terminal will display the prompt ```"Enter the new name for the C file:"```. For instance, if the user enters testfile, the alias will copy the ```skeleton.c``` file from the specified path, rename it to ```testfile.c```, and save the copy in the current directory. The implementation can be demonstrated as follows:
+
+Alias:  
+`alias get-c-skeleton='cp ~/Desktop/github/spice_libraries/c/skeleton.c "$(read -e -p "Enter new C file name: "; echo "$REPLY".c)"'`
+
+1Implementation:
+```
+[tester] ❱❱❱  $ get-c-skeleton 
+Enter new C file name: testfile
+[tester] ❱❱❱  $ ls
+testfile.c
+```
+
+
+##  [Custom functions with aliases](#custom-functions-with-aliases)
+- Aliases can also be employed to streamline repetitive command line tasks, such as securely copying files from one computer to another using the scp command over SSH. This is particularly useful when working on one computer, as creating an alias for the scp command eliminates the need to manually type out the command each time, enabling swift and convenient file transfers.
+
+```
+scp_() {
+        scp -P XXXXX -r "$@" your.ip.addr.here:~/Desktop/scp/.
+}
+```
+
+### Let's break this alias down:
+-**alias name** : `scp_` with an underscore added afterward. This naming convention is necessary because the command `scp` already exists. While it might be beneficial to choose a more descriptive name, the current alias serves its purpose effectively.
+
+-**scp command** : the function call is secure copy (`scp`), from port XXXXX (`-P XXXXX`), capture command line argument after function call (`"@"`), and the address and path to copy the files (`your.ip.addr.here:~/Desktop/scp/.`).
+
+- If implemented properly, with the correct privelages, you will be able to simply enter  "`scp_ [filename]`" and the alias will do the rest.
+
+- First time running alias: you will see something similar to this to establish a connection:
+```
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:15: [hashed name]
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+- after entering `yes`, this alias will skip this step and just prompt you for your password to continue.
+
+Implementaion:
+```
+[~] ❱❱❱  $ scp_ testfile.txt
+kyle@kdspicer.com's password: 
+```
