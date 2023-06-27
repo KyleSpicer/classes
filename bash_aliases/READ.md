@@ -182,3 +182,10 @@ Implementaion:
 [~] ❱❱❱  $ scp_ testfile.txt
 kyle@kdspicer.com's password: 
 ```
+
+- That's it! Your alias to secure copy from one computer to another via ssh is ready to go!
+
+
+# Conclusion
+- If you have any questions or improvements for this class, please shoot me an email at kyledspicer@gmail.com.
+- Thank you for taking time to read through and I hope you learned something!
