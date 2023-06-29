@@ -13,8 +13,8 @@ Copy code
     1. [Creating main() for check_program.c](#creating-main-for-check-programc)
     2. [Creating the Test Suite Runner](#creating-the-test-suite-runner)
     3. [Building a Sample Unit Test](#building-a-sample-unit-test)
-5. [Running Unit Test](#running-unit-test)
-	3. [About First Test](#about-first-test)
+5. [Running Unit Test](#running-unit-test)  
+    1. [About First Test](#about-first-test)
 6. [References](#references)
 
 <a name="introduction"></a>
