@@ -1,8 +1,4 @@
 
-Absolutely, here's how you can format this in markdown for a README.md file:
-
-markdown
-Copy code
 # Unit Testing in C: Using Check
 
 ## Table of Contents
