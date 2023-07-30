@@ -111,22 +111,22 @@ You can use this formatting file within your current repository with single file
 
 If there are any issues encountered because of misinformation from this class, please let me know so I can fix the class. 
 
-# Include-What-You-Use
+## Include-What-You-Use
 `TODO: Update Class`
 
-# Valgrind
+## Valgrind
 `TODO: Update Class`
 
-# Helgrind
+## Helgrind
 `TODO: Update Class`
 
-# fsanitize address
+## fsanitize address
 `TODO: Update Class`
 
-# fsanitize thread
+## fsanitize thread
 `TODO: Update Class`
 
-# Author
+## Author
 CW2 Kyle Spicer  
 
 Email:  
