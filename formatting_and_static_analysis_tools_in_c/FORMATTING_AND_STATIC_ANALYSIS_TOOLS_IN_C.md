@@ -81,6 +81,10 @@ Here are some simple steps to complete the second option:
 ```
 mkdir ~/.config/clang-format
 cp .clang-format ~/.config/clang-format/
+```
+
+`NOTE: You can use the ls command to verify the .clang-format file is in the correct directory.`
+```
 ls ~/.config/clang-format
 ```
 
